@@ -14,12 +14,12 @@ jobs:
     # if: ${{ github.ref == 'refs/heads/master' }}
     # needs: build
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-        uses: actions/checkout@v2
+    steps:
+      # - name: Checkout
+      # uses: actions/checkout@v2
 
-        - name: Set Environment Variables
-          run: echo 'test'
-          # uses: ./.github/actions/setvars
-          # with:
-          #   varFilePath: ./.github/variables/myvars.env
+      - name: Set Environment Variables
+        run: echo 'test'
+        # uses: ./.github/actions/setvars
+        # with:
+        #   varFilePath: ./.github/variables/myvars.env
