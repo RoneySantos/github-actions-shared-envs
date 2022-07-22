@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set Environment Variables
-        uses: RoneySantos/github-actions-shared-envs/.github/actions/setvars
+        uses: RoneySantos/github-actions-shared-envs/.github/actions/setvars@main
         with:
           varFilePath: ./.github/variables/myvars.env
