@@ -18,4 +18,4 @@ jobs:
       - name: Set Environment Variables
         uses: RoneySantos/github-actions-shared-envs/.github/actions/setvars@main
         with:
-          varFilePath: RoneySantos/github-actions-shared-envs/.github/variables/myvars.env
+          varFilePath: RoneySantos/github-actions-shared-envs/.github/variables/myvars.env@main
