@@ -1,9 +1,21 @@
-deploy:
-  if: ${{ github.ref == 'refs/heads/master' }}
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Set Environment Variables
-      uses: ./.github/actions/setvars
-      with:
-        varFilePath: ./.github/variables/myvars.env
+name: Test env shared
+
+on:
+  workflow_call:
+
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Environment Variables
+        uses: ./.github/actions/setvars
+        with:
+          varFilePath: ./.github/variables/myvars.env
